@@ -3,7 +3,7 @@ import type { ComponentType } from 'react'
 interface StatCardProps {
   label: string
   value: number
-  icon: ComponentType<{ size?: number }>
+ icon: React.ComponentType<{ size?: string | number }>
   tone?: 'default' | 'teal' | 'amber' | 'rose' | 'moss' | 'violet'
 }
 

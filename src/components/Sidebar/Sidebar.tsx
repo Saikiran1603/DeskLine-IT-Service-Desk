@@ -14,7 +14,7 @@ import { useAuth } from '@/context/AuthContext'
 interface NavItem {
   to: string
   label: string
-  icon: React.ComponentType<{ size?: number }>
+  icon: React.ComponentType<{ size?: string | number }>
 }
 
 export function Sidebar({ open }: { open: boolean }) {

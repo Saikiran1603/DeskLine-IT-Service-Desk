@@ -29,6 +29,7 @@ export default function ProfilePage() {
 
     setSubmitting(true)
     try {
+      if (!user) return;
       await userService.update(user.id, { fullName: fullName.trim(), phone: phone.trim(), department: department.trim() })
       show('Profile updated successfully.')
     } finally {
