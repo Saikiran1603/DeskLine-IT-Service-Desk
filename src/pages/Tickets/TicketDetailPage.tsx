@@ -145,27 +145,27 @@ export default function TicketDetailPage() {
     <AppShell title={`Ticket ${ticket.id}`}>
       <button
         onClick={() => navigate('/tickets')}
-        className="mb-4 flex items-center gap-1.5 text-sm font-medium text-ink-500 hover:text-ink-900"
+        className="mb-4 flex items-center gap-1.5 text-sm font-medium text-ink-500 hover:text-ink-900 dark:hover:text-ink-50"
       >
         <ArrowLeft size={15} /> Back to tickets
       </button>
 
       <div className="grid gap-4 lg:grid-cols-3">
         <div className="flex flex-col gap-4 lg:col-span-2">
-          <div className="rounded-md border border-ink-100 bg-white p-5 shadow-card">
+          <div className="rounded-md border border-ink-100 dark:border-ink-700 bg-white dark:border-ink-700 dark:bg-ink-900 p-5 shadow-card">
             <div className="flex flex-wrap items-start justify-between gap-3">
               <div>
                 <p className="text-xs font-medium text-ink-400">{ticket.id}</p>
-                <h2 className="mt-0.5 text-lg font-semibold text-ink-900">{ticket.subject}</h2>
+                <h2 className="mt-0.5 text-lg font-semibold text-ink-900 dark:text-ink-50">{ticket.subject}</h2>
               </div>
               <div className="flex items-center gap-2">
                 <PriorityBadge priority={ticket.priority} />
                 <StatusBadge status={ticket.status} />
               </div>
             </div>
-            <p className="mt-3 whitespace-pre-wrap text-sm text-ink-600">{ticket.description}</p>
+            <p className="mt-3 whitespace-pre-wrap text-sm text-ink-600 dark:text-ink-300">{ticket.description}</p>
 
-            <div className="mt-4 grid grid-cols-2 gap-3 border-t border-ink-100 pt-4 text-sm sm:grid-cols-4">
+            <div className="mt-4 grid grid-cols-2 gap-3 border-t border-ink-100 dark:border-ink-700 pt-4 text-sm sm:grid-cols-4">
               <div><p className="text-xs text-ink-400">Created By</p><p className="font-medium text-ink-800">{ticket.createdByName}</p></div>
               <div><p className="text-xs text-ink-400">Assigned Agent</p><p className="font-medium text-ink-800">{ticket.assignedAgentName ?? '—'}</p></div>
               <div><p className="text-xs text-ink-400">Category</p><p className="font-medium text-ink-800">{ticket.category}</p></div>
@@ -177,7 +177,7 @@ export default function TicketDetailPage() {
             {ticket.resolution && (
               <div className="mt-4 rounded-md border border-signal-moss/30 bg-signal-moss/5 p-3">
                 <p className="text-xs font-semibold text-signal-moss">Resolution</p>
-                <p className="mt-1 text-sm text-ink-700">{ticket.resolution}</p>
+                <p className="mt-1 text-sm text-ink-700 dark:text-ink-200">{ticket.resolution}</p>
                 {ticket.resolutionNotes && <p className="mt-1 text-xs text-ink-500">{ticket.resolutionNotes}</p>}
                 {ticket.resolutionDate && (
                   <p className="mt-1 text-xs text-ink-400">Resolved {new Date(ticket.resolutionDate).toLocaleString()}</p>
@@ -185,7 +185,7 @@ export default function TicketDetailPage() {
               </div>
             )}
 
-            <div className="mt-4 flex flex-wrap gap-2 border-t border-ink-100 pt-4">
+            <div className="mt-4 flex flex-wrap gap-2 border-t border-ink-100 dark:border-ink-700 pt-4">
               {statusActions.map((a) => (
                 <Button key={a.label} variant="secondary" size="sm" onClick={() => handleStatusChange(a.next)}>
                   {a.label}
@@ -209,7 +209,7 @@ export default function TicketDetailPage() {
             </div>
 
             {canChangePriority && (
-              <div className="mt-4 max-w-xs border-t border-ink-100 pt-4">
+              <div className="mt-4 max-w-xs border-t border-ink-100 dark:border-ink-700 pt-4">
                 <SelectField
                   label="Update Priority"
                   value={ticket.priority}
@@ -220,8 +220,8 @@ export default function TicketDetailPage() {
             )}
           </div>
 
-          <div className="rounded-md border border-ink-100 bg-white p-5 shadow-card">
-            <h3 className="mb-3 text-sm font-semibold text-ink-900">Comments</h3>
+          <div className="rounded-md border border-ink-100 dark:border-ink-700 bg-white dark:border-ink-700 dark:bg-ink-900 p-5 shadow-card">
+            <h3 className="mb-3 text-sm font-semibold text-ink-900 dark:text-ink-50">Comments</h3>
             <CommentsSection
               comments={comments ?? []}
               onAdd={handleAddComment}
@@ -230,8 +230,8 @@ export default function TicketDetailPage() {
           </div>
         </div>
 
-        <div className="rounded-md border border-ink-100 bg-white p-5 shadow-card">
-          <h3 className="mb-3 text-sm font-semibold text-ink-900">Activity History</h3>
+        <div className="rounded-md border border-ink-100 dark:border-ink-700 bg-white dark:border-ink-700 dark:bg-ink-900 p-5 shadow-card">
+          <h3 className="mb-3 text-sm font-semibold text-ink-900 dark:text-ink-50">Activity History</h3>
           <ActivityTimeline activity={ticket.activity} />
         </div>
       </div>

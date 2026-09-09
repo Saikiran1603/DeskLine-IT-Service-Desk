@@ -11,7 +11,7 @@ interface WrapperProps {
 function FieldWrapper({ label, error, required, children, hint }: WrapperProps) {
   return (
     <label className="block">
-      <span className="mb-1.5 block text-sm font-medium text-ink-700">
+      <span className="mb-1.5 block text-sm font-medium text-ink-700 dark:text-ink-200 dark:text-ink-200">
         {label}
         {required && <span className="text-signal-rose"> *</span>}
       </span>
@@ -23,8 +23,8 @@ function FieldWrapper({ label, error, required, children, hint }: WrapperProps) 
 }
 
 const inputClass = (hasError?: string) =>
-  `w-full rounded border px-3 py-2 text-sm text-ink-900 placeholder:text-ink-300 focus:outline-none focus:ring-2 focus:ring-signal-teal/40 ${
-    hasError ? 'border-signal-rose' : 'border-ink-200'
+  `w-full rounded border px-3 py-2 text-sm text-ink-900 dark:text-ink-50 placeholder:text-ink-300 focus:outline-none focus:ring-2 focus:ring-signal-teal/40 disabled:opacity-60 bg-white dark:bg-ink-800 dark:text-ink-50 dark:placeholder:text-ink-500 ${
+    hasError ? 'border-signal-rose' : 'border-ink-200 dark:border-ink-600'
   }`
 
 interface TextFieldProps extends InputHTMLAttributes<HTMLInputElement> {

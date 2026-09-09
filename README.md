@@ -130,15 +130,53 @@ Available actions are computed per-role in `src/utils/permissions.ts` (`availabl
 
 ## Deployment
 
-The app is a static Vite build and can be deployed to **Netlify** or **Vercel**:
+This project has **two parts that must both be deployed** for a live link to actually work for other people:
+
+1. The React frontend (static site) — Netlify or Vercel
+2. The JSON Server mock API — a small Node host like Render or Railway
+
+If you only deploy the frontend, logging in will fail with a network/connection error, because the deployed app is still pointed at `http://localhost:4000` — which refers to *the visitor's own computer*, not a real server, and nothing is listening there.
+
+### Step 1 — Deploy the backend (JSON Server)
+
+Using [Render](https://render.com) (free tier):
+
+1. Push this project to a GitHub repo.
+2. In Render, create a **New Web Service** from that repo.
+3. Build command: `npm install`
+4. Start command: `npm run start` (this runs JSON Server bound to Render's assigned port)
+5. Deploy. Render will give you a public URL, e.g. `https://deskline-api.onrender.com`.
+6. Confirm it works by visiting `https://deskline-api.onrender.com/users` in your browser — you should see the seeded user list as JSON.
+
+(Railway, Cyclic, or any Node host works the same way — just make sure the start command is `npm run start`.)
+
+### Step 2 — Point the frontend at the deployed backend
+
+In your Netlify (or Vercel) project settings, add an environment variable:
+
+```
+VITE_API_BASE_URL=https://deskline-api.onrender.com
+```
+
+(Use your actual backend URL from Step 1, no trailing slash.) Then trigger a redeploy — Vite only reads env vars at build time, so a previous deploy won't pick this up automatically.
+
+### Step 3 — Deploy the frontend
 
 ```bash
 npm run build
 ```
 
-Deploy the generated `dist/` folder. Since JSON Server is a local mock API, for a real deployment you would either:
-- Point `API_BASE_URL` in `src/services/api.ts` to a hosted JSON Server instance (e.g. deployed separately), or
-- Swap the `services/` layer for a real backend — the rest of the app is backend-agnostic.
+Deploy the generated `dist/` folder to Netlify or Vercel as usual (or connect the repo and let them build it — just make sure the env var from Step 2 is set on that project before the build runs).
+
+### Local development
+
+For local development only, no env var is needed — `src/services/api.ts` defaults to `http://localhost:4000`, which works as long as you run `npm run server` locally alongside `npm run dev`.
+
+### Why this matters
+
+Since JSON Server is a mock backend, this is fine for demos and coursework, but keep in mind:
+- Passwords are stored in plain text in `db.json` — do not use real credentials or deploy this pattern for production use.
+- Free-tier Node hosts often "sleep" after inactivity, so the first request after idle time may be slow — this is normal.
 
 ## Notes
 

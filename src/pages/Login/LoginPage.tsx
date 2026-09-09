@@ -57,7 +57,7 @@ export default function LoginPage() {
         </div>
 
         <div className="rounded-md bg-white p-7 shadow-card">
-          <h1 className="text-lg font-semibold text-ink-900">Sign in to your account</h1>
+          <h1 className="text-lg font-semibold text-ink-900 dark:text-ink-50">Sign in to your account</h1>
           <p className="mt-1 text-sm text-ink-400">IT Service Desk & Ticket Management</p>
 
           <form onSubmit={handleSubmit} className="mt-6 flex flex-col gap-4" noValidate>

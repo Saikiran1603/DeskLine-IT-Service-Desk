@@ -2,17 +2,17 @@ import type { Priority, Status } from '@/types/ticket'
 import type { Role, UserStatus } from '@/types/user'
 
 const STATUS_STYLES: Record<Status, string> = {
-  Open: 'bg-ink-100 text-ink-700 border-ink-200',
+  Open: 'bg-ink-100 dark:bg-ink-700 text-ink-700 dark:text-ink-200 border-ink-200',
   Assigned: 'bg-signal-violet/10 text-signal-violet border-signal-violet/30',
   'In Progress': 'bg-signal-teal/10 text-signal-tealDark border-signal-teal/30',
   Pending: 'bg-signal-amber/10 text-signal-amber border-signal-amber/30',
   Resolved: 'bg-signal-moss/10 text-signal-moss border-signal-moss/30',
-  Closed: 'bg-ink-200 text-ink-600 border-ink-300',
+  Closed: 'bg-ink-200 text-ink-600 dark:text-ink-300 border-ink-300',
   Cancelled: 'bg-signal-rose/10 text-signal-rose border-signal-rose/30',
 }
 
 const PRIORITY_STYLES: Record<Priority, string> = {
-  Low: 'bg-ink-100 text-ink-600 border-ink-200',
+  Low: 'bg-ink-100 dark:bg-ink-700 text-ink-600 dark:text-ink-300 border-ink-200',
   Medium: 'bg-signal-teal/10 text-signal-tealDark border-signal-teal/30',
   High: 'bg-signal-amber/10 text-signal-amber border-signal-amber/30',
   Critical: 'bg-signal-rose/10 text-signal-rose border-signal-rose/30',
@@ -21,7 +21,7 @@ const PRIORITY_STYLES: Record<Priority, string> = {
 const ROLE_STYLES: Record<Role, string> = {
   admin: 'bg-ink-900 text-white border-ink-900',
   agent: 'bg-signal-teal text-white border-signal-teal',
-  employee: 'bg-ink-200 text-ink-700 border-ink-200',
+  employee: 'bg-ink-200 text-ink-700 dark:text-ink-200 border-ink-200',
 }
 
 const ROLE_LABELS: Record<Role, string> = {

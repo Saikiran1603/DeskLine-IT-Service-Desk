@@ -25,18 +25,18 @@ interface FilterBarProps {
   showAgentFilter: boolean
 }
 
-const selectClass = 'rounded border border-ink-200 bg-white px-2.5 py-2 text-sm text-ink-700 focus:outline-none focus:ring-2 focus:ring-signal-teal/40'
+const selectClass = 'rounded border border-ink-200 bg-white px-2.5 py-2 text-sm text-ink-700 dark:text-ink-200 focus:outline-none focus:ring-2 focus:ring-signal-teal/40 dark:bg-ink-800 dark:border-ink-600'
 
 export function TicketFilterBar(props: FilterBarProps) {
   return (
-    <div className="flex flex-col gap-3 border-b border-ink-100 p-4 sm:flex-row sm:flex-wrap sm:items-center">
+    <div className="flex flex-col gap-3 border-b border-ink-100 dark:border-ink-700 p-4 sm:flex-row sm:flex-wrap sm:items-center">
       <div className="relative flex-1 min-w-[200px]">
         <Search size={15} className="pointer-events-none absolute left-2.5 top-1/2 -translate-y-1/2 text-ink-300" />
         <input
           value={props.search}
           onChange={(e) => props.onSearch(e.target.value)}
           placeholder="Search by ID, subject, requester, agent…"
-          className="w-full rounded border border-ink-200 py-2 pl-8 pr-3 text-sm focus:outline-none focus:ring-2 focus:ring-signal-teal/40"
+          className="w-full rounded border border-ink-200 py-2 pl-8 pr-3 text-sm focus:outline-none focus:ring-2 focus:ring-signal-teal/40 dark:bg-ink-800 dark:border-ink-600 dark:text-ink-50 dark:placeholder:text-ink-500"
         />
       </div>
 

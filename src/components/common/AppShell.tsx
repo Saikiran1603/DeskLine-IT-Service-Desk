@@ -6,7 +6,7 @@ export function AppShell({ title, children }: { title: string; children: ReactNo
   const [sidebarOpen, setSidebarOpen] = useState(false)
 
   return (
-    <div className="flex min-h-screen bg-ink-50">
+    <div className="flex min-h-screen bg-ink-50 dark:bg-ink-800 dark:bg-ink-950">
       <Sidebar open={sidebarOpen} />
       {sidebarOpen && (
         <div

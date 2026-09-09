@@ -62,7 +62,7 @@ export default function UsersPage() {
 
   return (
     <AppShell title="User Management">
-      <div className="rounded-md border border-ink-100 bg-white shadow-card">
+      <div className="rounded-md border border-ink-100 dark:border-ink-700 bg-white dark:border-ink-700 dark:bg-ink-900 shadow-card">
         <div className="flex flex-wrap items-center justify-between gap-3 p-4">
           <div className="relative w-full max-w-xs">
             <Search size={15} className="pointer-events-none absolute left-2.5 top-1/2 -translate-y-1/2 text-ink-300" />
@@ -70,7 +70,7 @@ export default function UsersPage() {
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               placeholder="Search users…"
-              className="w-full rounded border border-ink-200 py-2 pl-8 pr-3 text-sm focus:outline-none focus:ring-2 focus:ring-signal-teal/40"
+              className="w-full rounded border border-ink-200 py-2 pl-8 pr-3 text-sm focus:outline-none focus:ring-2 focus:ring-signal-teal/40 dark:bg-ink-800 dark:border-ink-600 dark:text-ink-50 dark:placeholder:text-ink-500"
             />
           </div>
           <Button variant="primary" size="sm" onClick={() => setShowForm(true)}>
@@ -84,7 +84,7 @@ export default function UsersPage() {
           <div className="overflow-x-auto">
             <table className="w-full text-left text-sm">
               <thead>
-                <tr className="border-y border-ink-100 text-xs uppercase tracking-wide text-ink-400">
+                <tr className="border-y border-ink-100 dark:border-ink-700 text-xs uppercase tracking-wide text-ink-400">
                   <th className="px-4 py-3 font-medium">Name</th>
                   <th className="px-4 py-3 font-medium">Email</th>
                   <th className="px-4 py-3 font-medium">Department</th>
@@ -93,20 +93,20 @@ export default function UsersPage() {
                   <th className="px-4 py-3 font-medium text-right">Actions</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-ink-100">
+              <tbody className="divide-y divide-ink-100 dark:divide-ink-700">
                 {filtered.map((u) => (
                   <tr key={u.id}>
-                    <td className="px-4 py-3 font-medium text-ink-900">{u.fullName}</td>
-                    <td className="px-4 py-3 text-ink-600">{u.email}</td>
-                    <td className="px-4 py-3 text-ink-600">{u.department}</td>
+                    <td className="px-4 py-3 font-medium text-ink-900 dark:text-ink-50">{u.fullName}</td>
+                    <td className="px-4 py-3 text-ink-600 dark:text-ink-300">{u.email}</td>
+                    <td className="px-4 py-3 text-ink-600 dark:text-ink-300">{u.department}</td>
                     <td className="px-4 py-3"><RoleBadge role={u.role} /></td>
                     <td className="px-4 py-3"><UserStatusBadge status={u.status} /></td>
                     <td className="px-4 py-3">
                       <div className="flex justify-end gap-1">
-                        <button onClick={() => toggleStatus(u)} title="Toggle status" className="rounded p-1.5 text-ink-500 hover:bg-ink-100">
+                        <button onClick={() => toggleStatus(u)} title="Toggle status" className="rounded p-1.5 text-ink-500 hover:bg-ink-100 dark:hover:bg-ink-800">
                           <Power size={15} />
                         </button>
-                        <button onClick={() => setEditing(u)} title="Edit" className="rounded p-1.5 text-ink-500 hover:bg-ink-100">
+                        <button onClick={() => setEditing(u)} title="Edit" className="rounded p-1.5 text-ink-500 hover:bg-ink-100 dark:hover:bg-ink-800">
                           <Pencil size={15} />
                         </button>
                         <button onClick={() => setDeleting(u)} title="Delete" className="rounded p-1.5 text-signal-rose hover:bg-signal-rose/10">

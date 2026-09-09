@@ -14,7 +14,7 @@ import { useAuth } from '@/context/AuthContext'
 interface NavItem {
   to: string
   label: string
-  icon: React.ComponentType<{ size?: string | number }>
+  icon: React.ComponentType<{ size?: number }>
 }
 
 export function Sidebar({ open }: { open: boolean }) {
@@ -47,15 +47,15 @@ export function Sidebar({ open }: { open: boolean }) {
 
   return (
     <aside
-      className={`fixed inset-y-0 left-0 z-30 w-60 flex-none border-r border-ink-100 bg-white transition-transform lg:static lg:translate-x-0 ${
+      className={`fixed inset-y-0 left-0 z-30 w-60 flex-none border-r border-ink-100 dark:border-ink-700 bg-white transition-transform dark:border-ink-800 dark:bg-ink-900 lg:static lg:translate-x-0 ${
         open ? 'translate-x-0' : '-translate-x-full'
       }`}
     >
-      <div className="flex h-16 items-center gap-2 border-b border-ink-100 px-5">
-        <div className="flex h-8 w-8 items-center justify-center rounded bg-ink-900 text-white">
+      <div className="flex h-16 items-center gap-2 border-b border-ink-100 dark:border-ink-700 px-5 dark:border-ink-800">
+        <div className="flex h-8 w-8 items-center justify-center rounded bg-ink-900 text-white dark:bg-signal-teal">
           <RouterIcon size={16} />
         </div>
-        <span className="text-[15px] font-bold tracking-tight text-ink-900">DeskLine</span>
+        <span className="text-[15px] font-bold tracking-tight text-ink-900 dark:text-ink-50 dark:text-ink-50">DeskLine</span>
       </div>
       <nav className="flex flex-col gap-0.5 p-3">
         {items.map(({ to, label, icon: Icon }) => (
@@ -66,8 +66,8 @@ export function Sidebar({ open }: { open: boolean }) {
             className={({ isActive }) =>
               `flex items-center gap-2.5 rounded px-3 py-2 text-sm font-medium transition-colors ${
                 isActive
-                  ? 'bg-ink-900 text-white'
-                  : 'text-ink-600 hover:bg-ink-100 hover:text-ink-900'
+                  ? 'bg-ink-900 text-white dark:bg-signal-teal'
+                  : 'text-ink-600 dark:text-ink-300 hover:bg-ink-100 dark:hover:bg-ink-800 hover:text-ink-900 dark:hover:text-ink-50 dark:text-ink-300 dark:hover:bg-ink-800 dark:hover:text-ink-50'
               }`
             }
           >

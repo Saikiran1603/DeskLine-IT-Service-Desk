@@ -29,7 +29,6 @@ export default function ProfilePage() {
 
     setSubmitting(true)
     try {
-      if (!user) return;
       await userService.update(user.id, { fullName: fullName.trim(), phone: phone.trim(), department: department.trim() })
       show('Profile updated successfully.')
     } finally {
@@ -39,13 +38,13 @@ export default function ProfilePage() {
 
   return (
     <AppShell title="My Profile">
-      <div className="mx-auto max-w-xl rounded-md border border-ink-100 bg-white p-6 shadow-card">
+      <div className="mx-auto max-w-xl rounded-md border border-ink-100 dark:border-ink-700 bg-white dark:border-ink-700 dark:bg-ink-900 p-6 shadow-card">
         <div className="mb-5 flex items-center gap-3">
           <div className="flex h-14 w-14 items-center justify-center rounded-full bg-ink-800 text-lg font-semibold text-white">
             {user.fullName.split(' ').map((p) => p[0]).join('').slice(0, 2).toUpperCase()}
           </div>
           <div>
-            <p className="text-base font-semibold text-ink-900">{user.fullName}</p>
+            <p className="text-base font-semibold text-ink-900 dark:text-ink-50">{user.fullName}</p>
             <div className="mt-1 flex gap-2">
               <RoleBadge role={user.role} />
               <UserStatusBadge status={user.status} />

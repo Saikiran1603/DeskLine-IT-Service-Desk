@@ -56,13 +56,13 @@ export function AssignmentModal({ ticket, agents, onAssign, onUnassign, onClose 
       }
     >
       <div className="flex flex-col gap-3 text-sm">
-        <div className="rounded bg-ink-50 p-3">
+        <div className="rounded bg-ink-50 dark:bg-ink-800 p-3">
           <p className="text-ink-400">Ticket</p>
-          <p className="font-medium text-ink-900">{ticket.subject}</p>
+          <p className="font-medium text-ink-900 dark:text-ink-50">{ticket.subject}</p>
         </div>
-        <div className="rounded bg-ink-50 p-3">
+        <div className="rounded bg-ink-50 dark:bg-ink-800 p-3">
           <p className="text-ink-400">Current Agent</p>
-          <p className="font-medium text-ink-900">{ticket.assignedAgentName ?? 'Unassigned'}</p>
+          <p className="font-medium text-ink-900 dark:text-ink-50">{ticket.assignedAgentName ?? 'Unassigned'}</p>
         </div>
         <SelectField
           label="Available Support Agents"

@@ -51,7 +51,7 @@ export default function CategoriesPage() {
 
   return (
     <AppShell title="Category Management">
-      <div className="rounded-md border border-ink-100 bg-white shadow-card">
+      <div className="rounded-md border border-ink-100 dark:border-ink-700 bg-white dark:border-ink-700 dark:bg-ink-900 shadow-card">
         <div className="flex items-center justify-between gap-3 p-4">
           <p className="text-sm text-ink-400">{categories.length} categories</p>
           <Button variant="primary" size="sm" onClick={() => setShowForm(true)}>
@@ -65,29 +65,29 @@ export default function CategoriesPage() {
           <div className="overflow-x-auto">
             <table className="w-full text-left text-sm">
               <thead>
-                <tr className="border-y border-ink-100 text-xs uppercase tracking-wide text-ink-400">
+                <tr className="border-y border-ink-100 dark:border-ink-700 text-xs uppercase tracking-wide text-ink-400">
                   <th className="px-4 py-3 font-medium">Name</th>
                   <th className="px-4 py-3 font-medium">Description</th>
                   <th className="px-4 py-3 font-medium">Status</th>
                   <th className="px-4 py-3 font-medium text-right">Actions</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-ink-100">
+              <tbody className="divide-y divide-ink-100 dark:divide-ink-700">
                 {categories.map((c) => (
                   <tr key={c.id}>
-                    <td className="px-4 py-3 font-medium text-ink-900">{c.name}</td>
+                    <td className="px-4 py-3 font-medium text-ink-900 dark:text-ink-50">{c.name}</td>
                     <td className="px-4 py-3 text-ink-500">{c.description || '—'}</td>
                     <td className="px-4 py-3">
-                      <span className={`inline-flex rounded-full border px-2.5 py-1 text-xs font-medium ${c.status === 'active' ? 'border-signal-moss/30 bg-signal-moss/10 text-signal-moss' : 'border-ink-300 bg-ink-200 text-ink-500'}`}>
+                      <span className={`inline-flex rounded-full border px-2.5 py-1 text-xs font-medium ${c.status === 'active' ? 'border-signal-moss/30 bg-signal-moss/10 text-signal-moss' : 'border-ink-300 dark:border-ink-600 bg-ink-200 dark:bg-ink-700 text-ink-500 dark:text-ink-300'}`}>
                         {c.status === 'active' ? 'Active' : 'Inactive'}
                       </span>
                     </td>
                     <td className="px-4 py-3">
                       <div className="flex justify-end gap-1">
-                        <button onClick={() => toggleStatus(c)} title="Toggle status" className="rounded p-1.5 text-ink-500 hover:bg-ink-100">
+                        <button onClick={() => toggleStatus(c)} title="Toggle status" className="rounded p-1.5 text-ink-500 hover:bg-ink-100 dark:hover:bg-ink-800">
                           <Power size={15} />
                         </button>
-                        <button onClick={() => setEditing(c)} title="Edit" className="rounded p-1.5 text-ink-500 hover:bg-ink-100">
+                        <button onClick={() => setEditing(c)} title="Edit" className="rounded p-1.5 text-ink-500 hover:bg-ink-100 dark:hover:bg-ink-800">
                           <Pencil size={15} />
                         </button>
                         <button onClick={() => setDeleting(c)} title="Delete" className="rounded p-1.5 text-signal-rose hover:bg-signal-rose/10">

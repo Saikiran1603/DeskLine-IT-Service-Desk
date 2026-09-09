@@ -32,7 +32,7 @@ export default function EditTicketPage() {
 
   return (
     <AppShell title="Edit Ticket">
-      <div className="mx-auto max-w-2xl rounded-md border border-ink-100 bg-white p-6 shadow-card">
+      <div className="mx-auto max-w-2xl rounded-md border border-ink-100 dark:border-ink-700 bg-white dark:border-ink-700 dark:bg-ink-900 p-6 shadow-card">
         <TicketForm
           categories={categories}
           initial={ticket}

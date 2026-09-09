@@ -27,20 +27,20 @@ export function Modal({ title, onClose, children, footer, width = 'md' }: ModalP
         role="dialog"
         aria-modal="true"
         aria-label={title}
-        className={`relative w-full ${WIDTHS[width]} rounded-md bg-white shadow-card max-h-[85vh] flex flex-col`}
+        className={`relative w-full ${WIDTHS[width]} rounded-md bg-white shadow-card max-h-[85vh] flex flex-col dark:bg-ink-900`}
       >
-        <div className="flex items-center justify-between border-b border-ink-100 px-5 py-4">
-          <h2 className="text-base font-semibold text-ink-900">{title}</h2>
+        <div className="flex items-center justify-between border-b border-ink-100 dark:border-ink-700 px-5 py-4 dark:border-ink-700">
+          <h2 className="text-base font-semibold text-ink-900 dark:text-ink-50 dark:text-ink-50">{title}</h2>
           <button
             onClick={onClose}
             aria-label="Close dialog"
-            className="rounded p-1 text-ink-400 hover:bg-ink-100 hover:text-ink-700"
+            className="rounded p-1 text-ink-400 hover:bg-ink-100 dark:hover:bg-ink-800 hover:text-ink-700 dark:hover:bg-ink-800 dark:hover:text-ink-200"
           >
             <X size={18} />
           </button>
         </div>
         <div className="overflow-y-auto px-5 py-4">{children}</div>
-        {footer && <div className="border-t border-ink-100 px-5 py-4">{footer}</div>}
+        {footer && <div className="border-t border-ink-100 dark:border-ink-700 px-5 py-4 dark:border-ink-700">{footer}</div>}
       </div>
     </div>
   )

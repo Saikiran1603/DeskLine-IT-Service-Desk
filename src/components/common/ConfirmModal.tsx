@@ -45,7 +45,7 @@ export function ConfirmModal({
         <div className="mt-0.5 flex h-9 w-9 flex-none items-center justify-center rounded-full bg-signal-rose/10 text-signal-rose">
           <AlertTriangle size={18} />
         </div>
-        <p className="text-sm text-ink-600">{message}</p>
+        <p className="text-sm text-ink-600 dark:text-ink-300">{message}</p>
       </div>
     </Modal>
   )

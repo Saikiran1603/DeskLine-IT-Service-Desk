@@ -39,15 +39,15 @@ export function CommentsSection({ comments, onAdd, canComment }: CommentsSection
       ) : (
         <ul className="flex flex-col gap-3">
           {comments.map((c) => (
-            <li key={c.id} className="rounded-md border border-ink-100 bg-ink-50 p-3">
+            <li key={c.id} className="rounded-md border border-ink-100 dark:border-ink-700 bg-ink-50 dark:bg-ink-800 p-3">
               <div className="mb-1 flex items-center gap-2">
-                <span className="text-sm font-medium text-ink-900">{c.userName}</span>
+                <span className="text-sm font-medium text-ink-900 dark:text-ink-50">{c.userName}</span>
                 <RoleBadge role={c.userRole as Role} />
                 <span className="ml-auto text-xs text-ink-400">
                   {new Date(c.createdDate).toLocaleDateString()} · {c.createdTime}
                 </span>
               </div>
-              <p className="text-sm text-ink-700 whitespace-pre-wrap">{c.comment}</p>
+              <p className="text-sm text-ink-700 dark:text-ink-200 whitespace-pre-wrap">{c.comment}</p>
             </li>
           ))}
         </ul>
@@ -60,7 +60,7 @@ export function CommentsSection({ comments, onAdd, canComment }: CommentsSection
             onChange={(e) => setText(e.target.value)}
             placeholder="Add a comment…"
             rows={3}
-            className="w-full rounded border border-ink-200 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-signal-teal/40"
+            className="w-full rounded border border-ink-200 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-signal-teal/40 dark:bg-ink-800 dark:border-ink-600 dark:text-ink-50 dark:placeholder:text-ink-500"
           />
           {error && <p className="text-xs font-medium text-signal-rose">{error}</p>}
           <div className="flex justify-end">

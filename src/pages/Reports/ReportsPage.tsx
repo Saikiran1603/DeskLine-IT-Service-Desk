@@ -21,7 +21,7 @@ function Bar({ label, value, max }: { label: string; value: number; max: number 
         <span>{label}</span>
         <span className="font-medium text-ink-800">{value}</span>
       </div>
-      <div className="h-2 rounded-full bg-ink-100">
+      <div className="h-2 rounded-full bg-ink-100 dark:bg-ink-700">
         <div className="h-2 rounded-full bg-signal-teal" style={{ width: `${pct}%` }} />
       </div>
     </div>
@@ -52,20 +52,20 @@ export default function ReportsPage() {
   return (
     <AppShell title="Reports">
       <div className="grid gap-4 lg:grid-cols-2">
-        <div className="rounded-md border border-ink-100 bg-white p-5 shadow-card">
-          <h3 className="mb-3 text-sm font-semibold text-ink-900">Tickets by Status</h3>
+        <div className="rounded-md border border-ink-100 dark:border-ink-700 bg-white dark:border-ink-700 dark:bg-ink-900 p-5 shadow-card">
+          <h3 className="mb-3 text-sm font-semibold text-ink-900 dark:text-ink-50">Tickets by Status</h3>
           {Object.entries(byStatus).map(([k, v]) => <Bar key={k} label={k} value={v} max={maxStatus} />)}
         </div>
-        <div className="rounded-md border border-ink-100 bg-white p-5 shadow-card">
-          <h3 className="mb-3 text-sm font-semibold text-ink-900">Tickets by Priority</h3>
+        <div className="rounded-md border border-ink-100 dark:border-ink-700 bg-white dark:border-ink-700 dark:bg-ink-900 p-5 shadow-card">
+          <h3 className="mb-3 text-sm font-semibold text-ink-900 dark:text-ink-50">Tickets by Priority</h3>
           {Object.entries(byPriority).map(([k, v]) => <Bar key={k} label={k} value={v} max={maxPriority} />)}
         </div>
-        <div className="rounded-md border border-ink-100 bg-white p-5 shadow-card">
-          <h3 className="mb-3 text-sm font-semibold text-ink-900">Tickets by Category</h3>
+        <div className="rounded-md border border-ink-100 dark:border-ink-700 bg-white dark:border-ink-700 dark:bg-ink-900 p-5 shadow-card">
+          <h3 className="mb-3 text-sm font-semibold text-ink-900 dark:text-ink-50">Tickets by Category</h3>
           {Object.entries(byCategory).map(([k, v]) => <Bar key={k} label={k} value={v} max={maxCategory} />)}
         </div>
-        <div className="rounded-md border border-ink-100 bg-white p-5 shadow-card">
-          <h3 className="mb-3 text-sm font-semibold text-ink-900">Agent Workload</h3>
+        <div className="rounded-md border border-ink-100 dark:border-ink-700 bg-white dark:border-ink-700 dark:bg-ink-900 p-5 shadow-card">
+          <h3 className="mb-3 text-sm font-semibold text-ink-900 dark:text-ink-50">Agent Workload</h3>
           {agentLoad.length === 0 ? (
             <p className="text-sm text-ink-400">No support agents yet.</p>
           ) : (

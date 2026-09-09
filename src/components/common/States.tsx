@@ -20,9 +20,9 @@ export function EmptyState({
   action?: ReactNode
 }) {
   return (
-    <div className="flex flex-col items-center justify-center gap-2 rounded-md border border-dashed border-ink-200 py-16 px-6 text-center">
+    <div className="flex flex-col items-center justify-center gap-2 rounded-md border border-dashed border-ink-200 py-16 px-6 text-center dark:border-ink-700">
       <Inbox className="text-ink-300 mb-1" size={28} />
-      <p className="text-sm font-medium text-ink-700">{title}</p>
+      <p className="text-sm font-medium text-ink-700 dark:text-ink-200 dark:text-ink-200">{title}</p>
       {description && <p className="text-sm text-ink-400 max-w-sm">{description}</p>}
       {action && <div className="mt-3">{action}</div>}
     </div>
@@ -37,7 +37,7 @@ export function ErrorState({ message, onRetry }: { message: string; onRetry?: ()
       {onRetry && (
         <button
           onClick={onRetry}
-          className="mt-2 text-sm font-medium text-ink-700 underline underline-offset-2 hover:text-ink-900"
+          className="mt-2 text-sm font-medium text-ink-700 dark:text-ink-200 underline underline-offset-2 hover:text-ink-900 dark:hover:text-ink-50 dark:text-ink-200 dark:hover:text-ink-50"
         >
           Try again
         </button>
