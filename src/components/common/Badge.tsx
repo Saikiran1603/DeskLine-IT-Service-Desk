@@ -19,9 +19,9 @@ const PRIORITY_STYLES: Record<Priority, string> = {
 }
 
 const ROLE_STYLES: Record<Role, string> = {
-  admin: 'bg-ink-900 text-white border-ink-900',
+  admin: 'bg-signal-teal text-white border-signal-teal',
   agent: 'bg-signal-teal text-white border-signal-teal',
-  employee: 'bg-ink-200 text-ink-900 dark:text-ink-200 border-ink-200',
+  employee: 'bg-signal-teal text-white border-signal-teal',
 }
 
 const ROLE_LABELS: Record<Role, string> = {
