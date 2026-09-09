@@ -24,7 +24,7 @@ export default function CreateTicketPage() {
 
   return (
     <AppShell title="Create Ticket">
-      <div className="mx-auto max-w-2xl rounded-md border border-ink-100 dark:border-ink-700 bg-white dark:border-ink-700 dark:bg-ink-900 p-6 shadow-card">
+      <div className="mx-auto max-w-2xl rounded-md border border-ink-100 dark:border-ink-700 bg-white dark:bg-ink-900 p-6 shadow-card">
         {isLoading || !categories ? (
           <LoadingState />
         ) : (

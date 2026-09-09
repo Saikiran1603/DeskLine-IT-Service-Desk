@@ -62,7 +62,7 @@ export default function UsersPage() {
 
   return (
     <AppShell title="User Management">
-      <div className="rounded-md border border-ink-100 dark:border-ink-700 bg-white dark:border-ink-700 dark:bg-ink-900 shadow-card">
+      <div className="rounded-md border border-ink-100 dark:border-ink-700 bg-white dark:bg-ink-900 shadow-card">
         <div className="flex flex-wrap items-center justify-between gap-3 p-4">
           <div className="relative w-full max-w-xs">
             <Search size={15} className="pointer-events-none absolute left-2.5 top-1/2 -translate-y-1/2 text-ink-300" />

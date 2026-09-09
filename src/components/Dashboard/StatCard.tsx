@@ -1,9 +1,9 @@
-import type { ComponentType } from 'react'
+import type { LucideIcon } from 'lucide-react'
 
 interface StatCardProps {
   label: string
   value: number
-  icon: ComponentType<{ size?: number }>
+  icon: LucideIcon
   tone?: 'default' | 'teal' | 'amber' | 'rose' | 'moss' | 'violet'
 }
 
@@ -18,7 +18,7 @@ const TONES: Record<NonNullable<StatCardProps['tone']>, string> = {
 
 export function StatCard({ label, value, icon: Icon, tone = 'default' }: StatCardProps) {
   return (
-    <div className="rounded-md border border-ink-100 dark:border-ink-700 bg-white dark:border-ink-700 dark:bg-ink-900 p-4 shadow-card">
+    <div className="rounded-md border border-ink-100 dark:border-ink-700 bg-white dark:bg-ink-900 p-4 shadow-card">
       <div className="flex items-start justify-between">
         <div>
           <p className="text-sm text-ink-500">{label}</p>

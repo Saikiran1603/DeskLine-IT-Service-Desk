@@ -152,7 +152,7 @@ export default function TicketDetailPage() {
 
       <div className="grid gap-4 lg:grid-cols-3">
         <div className="flex flex-col gap-4 lg:col-span-2">
-          <div className="rounded-md border border-ink-100 dark:border-ink-700 bg-white dark:border-ink-700 dark:bg-ink-900 p-5 shadow-card">
+          <div className="rounded-md border border-ink-100 dark:border-ink-700 bg-white dark:bg-ink-900 p-5 shadow-card">
             <div className="flex flex-wrap items-start justify-between gap-3">
               <div>
                 <p className="text-xs font-medium text-ink-400">{ticket.id}</p>
@@ -220,7 +220,7 @@ export default function TicketDetailPage() {
             )}
           </div>
 
-          <div className="rounded-md border border-ink-100 dark:border-ink-700 bg-white dark:border-ink-700 dark:bg-ink-900 p-5 shadow-card">
+          <div className="rounded-md border border-ink-100 dark:border-ink-700 bg-white dark:bg-ink-900 p-5 shadow-card">
             <h3 className="mb-3 text-sm font-semibold text-ink-900 dark:text-ink-50">Comments</h3>
             <CommentsSection
               comments={comments ?? []}
@@ -230,7 +230,7 @@ export default function TicketDetailPage() {
           </div>
         </div>
 
-        <div className="rounded-md border border-ink-100 dark:border-ink-700 bg-white dark:border-ink-700 dark:bg-ink-900 p-5 shadow-card">
+        <div className="rounded-md border border-ink-100 dark:border-ink-700 bg-white dark:bg-ink-900 p-5 shadow-card">
           <h3 className="mb-3 text-sm font-semibold text-ink-900 dark:text-ink-50">Activity History</h3>
           <ActivityTimeline activity={ticket.activity} />
         </div>

@@ -51,7 +51,7 @@ export default function CategoriesPage() {
 
   return (
     <AppShell title="Category Management">
-      <div className="rounded-md border border-ink-100 dark:border-ink-700 bg-white dark:border-ink-700 dark:bg-ink-900 shadow-card">
+      <div className="rounded-md border border-ink-100 dark:border-ink-700 bg-white dark:bg-ink-900 shadow-card">
         <div className="flex items-center justify-between gap-3 p-4">
           <p className="text-sm text-ink-400">{categories.length} categories</p>
           <Button variant="primary" size="sm" onClick={() => setShowForm(true)}>

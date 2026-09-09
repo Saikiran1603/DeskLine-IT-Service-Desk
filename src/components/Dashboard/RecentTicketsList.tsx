@@ -6,7 +6,7 @@ import { EmptyState } from '@/components/common/States'
 export function RecentTicketsList({ tickets, title }: { tickets: Ticket[]; title: string }) {
   const navigate = useNavigate()
   return (
-    <div className="rounded-md border border-ink-100 dark:border-ink-700 bg-white dark:border-ink-700 dark:bg-ink-900 shadow-card">
+    <div className="rounded-md border border-ink-100 dark:border-ink-700 bg-white dark:bg-ink-900 shadow-card">
       <div className="border-b border-ink-100 dark:border-ink-700 px-4 py-3">
         <h3 className="text-sm font-semibold text-ink-900 dark:text-ink-50">{title}</h3>
       </div>

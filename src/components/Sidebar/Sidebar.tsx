@@ -8,13 +8,14 @@ import {
   UserCircle,
   PlusCircle,
   Router as RouterIcon,
+  type LucideIcon,
 } from 'lucide-react'
 import { useAuth } from '@/context/AuthContext'
 
 interface NavItem {
   to: string
   label: string
-  icon: React.ComponentType<{ size?: number }>
+  icon: LucideIcon
 }
 
 export function Sidebar({ open }: { open: boolean }) {
