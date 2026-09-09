@@ -1,0 +1,574 @@
+{
+  "users": [
+    {
+      "id": "u-001",
+      "fullName": "Saikiran",
+      "email": "admin@deskline.com",
+      "password": "password123",
+      "phone": "555-010-1001",
+      "department": "IT Administration",
+      "role": "admin",
+      "status": "active",
+      "createdDate": "2025-11-01T09:00:00.000Z"
+    },
+    {
+      "id": "u-002",
+      "fullName": "Daniel Cho",
+      "email": "agent1@deskline.com",
+      "password": "password123",
+      "phone": "555-010-1002",
+      "department": "IT Support",
+      "role": "agent",
+      "status": "active",
+      "createdDate": "2025-11-02T09:00:00.000Z"
+    },
+    {
+      "id": "u-003",
+      "fullName": "Priya Nair",
+      "email": "agent2@deskline.com",
+      "password": "password123",
+      "phone": "555-010-1003",
+      "department": "IT Support",
+      "role": "agent",
+      "status": "active",
+      "createdDate": "2025-11-02T09:15:00.000Z"
+    },
+    {
+      "id": "u-004",
+      "fullName": "saikiran",
+      "email": "employee1@deskline.com",
+      "password": "password123",
+      "phone": "555-010-1004",
+      "department": "Finance",
+      "role": "employee",
+      "status": "active",
+      "createdDate": "2025-11-03T09:00:00.000Z"
+    },
+    {
+      "id": "u-005",
+      "fullName": "Lena Ortiz",
+      "email": "employee2@deskline.com",
+      "password": "password123",
+      "phone": "555-010-1005",
+      "department": "Marketing",
+      "role": "employee",
+      "status": "active",
+      "createdDate": "2025-11-03T09:20:00.000Z"
+    },
+    {
+      "id": "u-006",
+      "fullName": "Grace Okafor",
+      "email": "employee3@deskline.com",
+      "password": "password123",
+      "phone": "555-010-1006",
+      "department": "Sales",
+      "role": "employee",
+      "status": "inactive",
+      "createdDate": "2025-11-04T09:00:00.000Z"
+    },
+    {
+      "fullName": "Palakurla Saikiran",
+      "email": "saikirangoudpalakurla549@gmail.com",
+      "password": "password123",
+      "phone": "894748855",
+      "department": "frontend",
+      "role": "employee",
+      "status": "active",
+      "createdDate": "2026-09-07T04:10:20.205Z",
+      "id": "39vq0AE"
+    }
+  ],
+  "categories": [
+    {
+      "id": "c-002",
+      "name": "Software",
+      "description": "Application installs, bugs, and licensing.",
+      "status": "active"
+    },
+    {
+      "id": "c-003",
+      "name": "Network",
+      "description": "Wi-Fi, VPN, and connectivity issues.",
+      "status": "active"
+    },
+    {
+      "id": "c-004",
+      "name": "Email",
+      "description": "Mailbox, spam, and calendar issues.",
+      "status": "active"
+    },
+    {
+      "id": "c-005",
+      "name": "Security",
+      "description": "Access, phishing, and account security.",
+      "status": "active"
+    },
+    {
+      "id": "c-006",
+      "name": "Access Request",
+      "description": "New system or folder access requests.",
+      "status": "active"
+    },
+    {
+      "id": "c-007",
+      "name": "Other",
+      "description": "Anything that doesn't fit another category.",
+      "status": "active"
+    },
+    {
+      "name": "soft",
+      "description": "web site not working",
+      "status": "active",
+      "id": "TvRqT8p"
+    }
+  ],
+  "tickets": [
+    {
+      "id": "t-1001",
+      "subject": "Unable to connect to office Wi-Fi",
+      "description": "My laptop keeps dropping the office Wi-Fi every few minutes. It started this morning after the update.",
+      "createdBy": "u-004",
+      "createdByName": "Marcus Webb",
+      "assignedAgentId": "u-002",
+      "assignedAgentName": "Daniel Cho",
+      "category": "Network",
+      "priority": "High",
+      "status": "Closed",
+      "contactMethod": "Email",
+      "createdDate": "2026-09-01T10:30:00.000Z",
+      "updatedDate": "2026-09-07T04:55:23.343Z",
+      "dueDate": null,
+      "resolution": "Network adapter was reset and the device was reconnected to the corporate Wi-Fi.",
+      "resolutionNotes": "Also updated the Wi-Fi driver to the latest version to prevent recurrence.",
+      "resolutionDate": "2026-09-01T13:00:00.000Z",
+      "activity": [
+        {
+          "id": "a-1",
+          "timestamp": "2026-09-01T10:30:00.000Z",
+          "actorName": "Marcus Webb",
+          "actorRole": "employee",
+          "message": "Ticket created"
+        },
+        {
+          "id": "a-2",
+          "timestamp": "2026-09-01T10:45:00.000Z",
+          "actorName": "Ava Mitchell",
+          "actorRole": "admin",
+          "message": "Assigned to Daniel Cho"
+        },
+        {
+          "id": "a-3",
+          "timestamp": "2026-09-01T11:10:00.000Z",
+          "actorName": "Daniel Cho",
+          "actorRole": "agent",
+          "message": "Status changed to In Progress"
+        },
+        {
+          "id": "a-4",
+          "timestamp": "2026-09-01T12:15:00.000Z",
+          "actorName": "Daniel Cho",
+          "actorRole": "agent",
+          "message": "Comment added"
+        },
+        {
+          "id": "a-5",
+          "timestamp": "2026-09-01T13:00:00.000Z",
+          "actorName": "Daniel Cho",
+          "actorRole": "agent",
+          "message": "Resolution added — ticket resolved"
+        },
+        {
+          "id": "act-1788756883530-1l2md",
+          "timestamp": "2026-09-07T04:54:43.530Z",
+          "actorName": "Daniel Cho",
+          "actorRole": "agent",
+          "message": "Ticket closed"
+        }
+      ]
+    },
+    {
+      "id": "t-1002",
+      "subject": "Cannot install Adobe Acrobat",
+      "description": "Getting a permissions error when trying to install Adobe Acrobat Pro on my work laptop.",
+      "createdBy": "u-005",
+      "createdByName": "Lena Ortiz",
+      "assignedAgentId": "u-003",
+      "assignedAgentName": "Priya Nair",
+      "category": "Software",
+      "priority": "Medium",
+      "status": "In Progress",
+      "contactMethod": "Chat",
+      "createdDate": "2026-09-03T08:15:00.000Z",
+      "updatedDate": "2026-09-03T09:05:00.000Z",
+      "dueDate": null,
+      "resolution": null,
+      "resolutionNotes": null,
+      "resolutionDate": null,
+      "activity": [
+        {
+          "id": "a-1",
+          "timestamp": "2026-09-03T08:15:00.000Z",
+          "actorName": "Lena Ortiz",
+          "actorRole": "employee",
+          "message": "Ticket created"
+        },
+        {
+          "id": "a-2",
+          "timestamp": "2026-09-03T08:40:00.000Z",
+          "actorName": "Ava Mitchell",
+          "actorRole": "admin",
+          "message": "Assigned to Priya Nair"
+        },
+        {
+          "id": "a-3",
+          "timestamp": "2026-09-03T09:05:00.000Z",
+          "actorName": "Priya Nair",
+          "actorRole": "agent",
+          "message": "Status changed to In Progress"
+        }
+      ]
+    },
+    {
+      "id": "t-1003",
+      "subject": "Suspicious phishing email received",
+      "description": "I received an email claiming to be from IT asking me to reset my password via an external link. Reporting as suspicious.",
+      "createdBy": "u-004",
+      "createdByName": "Marcus Webb",
+      "assignedAgentId": null,
+      "assignedAgentName": null,
+      "category": "Security",
+      "priority": "Critical",
+      "status": "Assigned",
+      "contactMethod": "Email",
+      "createdDate": "2026-09-05T14:00:00.000Z",
+      "updatedDate": "2026-09-07T12:37:00.117Z",
+      "dueDate": null,
+      "resolution": null,
+      "resolutionNotes": null,
+      "resolutionDate": null,
+      "activity": [
+        {
+          "id": "a-1",
+          "timestamp": "2026-09-05T14:00:00.000Z",
+          "actorName": "Marcus Webb",
+          "actorRole": "employee",
+          "message": "Ticket created"
+        },
+        {
+          "id": "act-1788757131236-uqx55",
+          "timestamp": "2026-09-07T04:58:51.236Z",
+          "actorName": "Marcus Webb",
+          "actorRole": "employee",
+          "message": "Comment added"
+        },
+        {
+          "id": "act-1788784620117-cjbpc",
+          "timestamp": "2026-09-07T12:37:00.117Z",
+          "actorName": "Saikiran",
+          "actorRole": "admin",
+          "message": "Status changed to Assigned"
+        }
+      ]
+    },
+    {
+      "id": "t-1004",
+      "subject": "Need access to shared Finance drive",
+      "description": "Requesting read/write access to the shared Finance drive for the Q3 budget review.",
+      "createdBy": "u-005",
+      "createdByName": "Lena Ortiz",
+      "assignedAgentId": "u-002",
+      "assignedAgentName": "Daniel Cho",
+      "category": "Access Request",
+      "priority": "Medium",
+      "status": "Pending",
+      "contactMethod": "Email",
+      "createdDate": "2026-09-04T11:00:00.000Z",
+      "updatedDate": "2026-09-07T04:56:51.669Z",
+      "dueDate": null,
+      "resolution": null,
+      "resolutionNotes": null,
+      "resolutionDate": null,
+      "activity": [
+        {
+          "id": "a-1",
+          "timestamp": "2026-09-04T11:00:00.000Z",
+          "actorName": "Lena Ortiz",
+          "actorRole": "employee",
+          "message": "Ticket created"
+        },
+        {
+          "id": "a-2",
+          "timestamp": "2026-09-04T11:30:00.000Z",
+          "actorName": "Ava Mitchell",
+          "actorRole": "admin",
+          "message": "Assigned to Daniel Cho"
+        },
+        {
+          "id": "a-3",
+          "timestamp": "2026-09-04T15:00:00.000Z",
+          "actorName": "Daniel Cho",
+          "actorRole": "agent",
+          "message": "Status changed to Pending"
+        },
+        {
+          "id": "act-1788756594644-7n2kn",
+          "timestamp": "2026-09-07T04:49:54.644Z",
+          "actorName": "Daniel Cho",
+          "actorRole": "agent",
+          "message": "Status changed to In Progress"
+        },
+        {
+          "id": "act-1788756598151-cs07l",
+          "timestamp": "2026-09-07T04:49:58.151Z",
+          "actorName": "Daniel Cho",
+          "actorRole": "agent",
+          "message": "Status changed to Pending"
+        },
+        {
+          "id": "act-1788756978041-im7ff",
+          "timestamp": "2026-09-07T04:56:18.041Z",
+          "actorName": "Daniel Cho",
+          "actorRole": "agent",
+          "message": "Status changed to In Progress"
+        },
+        {
+          "id": "act-1788756985143-9h1zw",
+          "timestamp": "2026-09-07T04:56:25.143Z",
+          "actorName": "Daniel Cho",
+          "actorRole": "agent",
+          "message": "Status changed to Pending"
+        },
+        {
+          "id": "act-1788756995408-8y0k5",
+          "timestamp": "2026-09-07T04:56:35.408Z",
+          "actorName": "Daniel Cho",
+          "actorRole": "agent",
+          "message": "Priority changed to Medium"
+        },
+        {
+          "id": "act-1788757011668-cyyyy",
+          "timestamp": "2026-09-07T04:56:51.668Z",
+          "actorName": "Daniel Cho",
+          "actorRole": "agent",
+          "message": "Comment added"
+        }
+      ]
+    },
+    {
+      "id": "t-1005",
+      "subject": "Monitor flickering intermittently",
+      "description": "The external monitor at my desk flickers every 10-15 minutes. Tried a different cable, same issue.",
+      "createdBy": "u-004",
+      "createdByName": "Marcus Webb",
+      "assignedAgentId": "u-003",
+      "assignedAgentName": "Priya Nair",
+      "category": "Hardware",
+      "priority": "Medium",
+      "status": "Closed",
+      "contactMethod": "Phone",
+      "createdDate": "2026-08-28T09:00:00.000Z",
+      "updatedDate": "2026-08-29T10:00:00.000Z",
+      "dueDate": null,
+      "resolution": "Monitor was replaced with a new unit from IT inventory.",
+      "resolutionNotes": "Old unit flagged for hardware disposal.",
+      "resolutionDate": "2026-08-29T09:30:00.000Z",
+      "activity": [
+        {
+          "id": "a-1",
+          "timestamp": "2026-08-28T09:00:00.000Z",
+          "actorName": "Marcus Webb",
+          "actorRole": "employee",
+          "message": "Ticket created"
+        },
+        {
+          "id": "a-2",
+          "timestamp": "2026-08-28T09:30:00.000Z",
+          "actorName": "Ava Mitchell",
+          "actorRole": "admin",
+          "message": "Assigned to Priya Nair"
+        },
+        {
+          "id": "a-3",
+          "timestamp": "2026-08-28T13:00:00.000Z",
+          "actorName": "Priya Nair",
+          "actorRole": "agent",
+          "message": "Status changed to In Progress"
+        },
+        {
+          "id": "a-4",
+          "timestamp": "2026-08-29T09:30:00.000Z",
+          "actorName": "Priya Nair",
+          "actorRole": "agent",
+          "message": "Resolution added — ticket resolved"
+        },
+        {
+          "id": "a-5",
+          "timestamp": "2026-08-29T10:00:00.000Z",
+          "actorName": "Priya Nair",
+          "actorRole": "agent",
+          "message": "Ticket closed"
+        }
+      ]
+    },
+    {
+      "id": "t-1006",
+      "subject": "Outlook calendar not syncing on phone",
+      "description": "My Outlook calendar events aren't syncing to my phone since yesterday.",
+      "createdBy": "u-005",
+      "createdByName": "Lena Ortiz",
+      "assignedAgentId": null,
+      "assignedAgentName": null,
+      "category": "Email",
+      "priority": "Low",
+      "status": "Open",
+      "contactMethod": "Chat",
+      "createdDate": "2026-09-06T16:00:00.000Z",
+      "updatedDate": "2026-09-06T16:00:00.000Z",
+      "dueDate": null,
+      "resolution": null,
+      "resolutionNotes": null,
+      "resolutionDate": null,
+      "activity": [
+        {
+          "id": "a-1",
+          "timestamp": "2026-09-06T16:00:00.000Z",
+          "actorName": "Lena Ortiz",
+          "actorRole": "employee",
+          "message": "Ticket created"
+        }
+      ]
+    },
+    {
+      "subject": "application not opening",
+      "description": "application not allowing to access",
+      "category": "Access Request",
+      "priority": "High",
+      "contactMethod": "Email",
+      "createdBy": "u-001",
+      "createdByName": "Ava Mitchell",
+      "assignedAgentId": null,
+      "assignedAgentName": null,
+      "status": "Open",
+      "createdDate": "2026-09-07T04:45:34.133Z",
+      "updatedDate": "2026-09-07T04:45:34.133Z",
+      "dueDate": null,
+      "resolution": null,
+      "resolutionNotes": null,
+      "resolutionDate": null,
+      "activity": [
+        {
+          "id": "act-1788756334133",
+          "timestamp": "2026-09-07T04:45:34.133Z",
+          "actorName": "Ava Mitchell",
+          "actorRole": "admin",
+          "message": "Ticket created"
+        }
+      ],
+      "id": "-mQk8q5"
+    },
+    {
+      "subject": "company mail not created",
+      "description": "i did not receive official mail",
+      "category": "Email",
+      "priority": "High",
+      "contactMethod": "Chat",
+      "createdBy": "u-004",
+      "createdByName": "Marcus Webb",
+      "assignedAgentId": "u-003",
+      "assignedAgentName": "Priya Nair",
+      "status": "Assigned",
+      "createdDate": "2026-09-07T05:01:43.951Z",
+      "updatedDate": "2026-09-07T05:05:13.732Z",
+      "dueDate": null,
+      "resolution": null,
+      "resolutionNotes": null,
+      "resolutionDate": null,
+      "activity": [
+        {
+          "id": "act-1788757303951",
+          "timestamp": "2026-09-07T05:01:43.951Z",
+          "actorName": "Marcus Webb",
+          "actorRole": "employee",
+          "message": "Ticket created"
+        },
+        {
+          "id": "act-1788757496086-pe3zr",
+          "timestamp": "2026-09-07T05:04:56.086Z",
+          "actorName": "Ava Mitchell",
+          "actorRole": "admin",
+          "message": "Status changed to Assigned"
+        },
+        {
+          "id": "act-1788757513732-kp339",
+          "timestamp": "2026-09-07T05:05:13.732Z",
+          "actorName": "Ava Mitchell",
+          "actorRole": "admin",
+          "message": "Assigned to Priya Nair"
+        }
+      ],
+      "id": "sqhLWmX"
+    }
+  ],
+  "comments": [
+    {
+      "id": "cm-001",
+      "ticketId": "t-1001",
+      "userId": "u-002",
+      "userName": "Daniel Cho",
+      "userRole": "agent",
+      "comment": "Looked into this — seems related to a firmware issue on the office access point. Resetting your adapter now.",
+      "createdDate": "2026-09-01T12:15:00.000Z",
+      "createdTime": "12:15 PM"
+    },
+    {
+      "id": "cm-002",
+      "ticketId": "t-1002",
+      "userId": "u-003",
+      "userName": "Priya Nair",
+      "userRole": "agent",
+      "comment": "Can you confirm which Windows build you're on? Settings > System > About.",
+      "createdDate": "2026-09-03T09:10:00.000Z",
+      "createdTime": "9:10 AM"
+    },
+    {
+      "id": "cm-003",
+      "ticketId": "t-1004",
+      "userId": "u-002",
+      "userName": "Daniel Cho",
+      "userRole": "agent",
+      "comment": "Pending manager approval before I can grant access — following up with your supervisor.",
+      "createdDate": "2026-09-04T15:00:00.000Z",
+      "createdTime": "3:00 PM"
+    },
+    {
+      "ticketId": "t-1001",
+      "userId": "u-002",
+      "userName": "Daniel Cho",
+      "userRole": "agent",
+      "comment": "okay good",
+      "createdDate": "2026-09-07T04:54:10.680Z",
+      "createdTime": "10:24 AM",
+      "id": "8Sr6PnO"
+    },
+    {
+      "ticketId": "t-1004",
+      "userId": "u-002",
+      "userName": "Daniel Cho",
+      "userRole": "agent",
+      "comment": "okay",
+      "createdDate": "2026-09-07T04:56:51.609Z",
+      "createdTime": "10:26 AM",
+      "id": "GqdwmdQ"
+    },
+    {
+      "ticketId": "t-1003",
+      "userId": "u-004",
+      "userName": "Marcus Webb",
+      "userRole": "employee",
+      "comment": "it is most important",
+      "createdDate": "2026-09-07T04:58:51.197Z",
+      "createdTime": "10:28 AM",
+      "id": "jnMhgwA"
+    }
+  ]
+}
